@@ -12,6 +12,12 @@
 
 #import "SecondViewController.h"
 
+#import "NavViewController.h"
+
+#import "TablaViewController.h"
+
+#import "TwitterViewController.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -20,8 +26,12 @@
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
     UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    TablaViewController *tabla =  [[TablaViewController alloc] initWithNibName:@"TablaViewController" bundle:nil];
+    UINavigationController *viewController3 = [[NavViewController alloc] initWithRootViewController:tabla ];
+    UIViewController *viewController4 = [[TwitterViewController alloc] initWithNibName:@"TwitterViewController" bundle:nil];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.viewControllers = @[viewController1, viewController2, viewController3, viewController4];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

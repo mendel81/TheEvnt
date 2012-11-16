@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UITextFieldDelegate> {
+
+    IBOutlet UILabel *nombre;
+    IBOutlet UITextField *presentate;
+    IBOutlet UISegmentedControl *colores;
+}
+
+- (IBAction)diHola:(id)sender;
+- (IBAction)cambiarColorFondo:(id)sender;
 
 @end

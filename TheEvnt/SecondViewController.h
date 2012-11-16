@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController{
+    NSMutableDictionary *facebook;
+    IBOutlet UILabel *nombre;
+    IBOutlet UITextView *datos;
+    IBOutlet UITextField *username;
+    
+}
 
+- (void)fletchFB:(NSString*)username;
+-(IBAction)facebookeame:(id)sender;
 @end
